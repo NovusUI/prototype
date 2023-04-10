@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <html lang="en">
+<head>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.0.8/aframe/build/aframe-ar.js"></script>
+  
+    <!-- we import arjs version without NFT but with marker + location based support -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Augmented-Reality Portal</title>
+</head>
+    
+    <body style="margin : 0px; overflow: hidden;">
+        <a-scene embedded arjs>
+          <a-marker type="pattern" url='./assets/images/pattern-Lynn marker.patt' value="5">
+            <a-entity>
+              <a-text value="Hello, World!" position="0 1 0" color="red"></a-text>
+              <a-text value="Hello, World!" position="0 1 0" color="red" follow="#marker"></a-text>
+              <a-text value="Hello, World!" position="0 1 0" animation="property: rotation; to: 0 360 0; dur: 2000; easing: linear; loop: true"  font="mozillavr"></a-text>
+          </a-entity>
+        </a-marker>
+
+        </a-scene>
+
+        
+      </body>
+    </html>
+    
+        </a-marker>
+        <a-entity camera></a-entity>
+        </a-scene>
+    </body>
+</html>
