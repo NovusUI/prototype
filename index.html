@@ -2,10 +2,11 @@
 <html>
   <html lang="en">
 <head>
-  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
-  <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.0.8/aframe/build/aframe-ar.js"></script>
+  <!-- <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script> -->
+  <!-- <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.0.8/aframe/build/aframe-ar.js"></script> -->
+  <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script> 
   <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script> 
-  
+  <script src="myfont.typeface.js"></script> 
     <!-- we import arjs version without NFT but with marker + location based support -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,15 +25,15 @@
         </a-marker>
 
         </a-scene> -->
+       
         <a-scene>
-          
           <a-assets>
             <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
+            <a-mixin id="boldFont" text="font: #optimerBoldFont"></a-mixin>
           </a-assets>
-          <a-marker type="pattern" url='./assets/images/pattern-Lynn marker.patt' value="5"></a-marker>
-          <!-- <a-entity text-geometry="value: What's up"></a-entity> -->
-          <a-entity size: 2 1 0.5 position="0 1 0" rotation="0 45 0" color: #5d612f text-geometry="value: Dog?; font: #optimerBoldFont"></a-entity>
-        </a-marker>
+     
+          <a-entity mixin="boldFont" text-geometry="value: What's up"></a-entity>
+          <a-entity text-geometry="value: Dog?; font: #optimerBoldFont"></a-entity>
         </a-scene>
 
         
